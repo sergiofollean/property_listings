@@ -1,0 +1,8 @@
+# directories
+node_modules
+vendor
+composer-plugins
+
+# files
+assets/dist.css
+

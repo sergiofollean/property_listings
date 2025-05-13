@@ -1,0 +1,25 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.advancedcustomfields.com"
+    }
+  ],
+  "require": {
+    "wpengine/advanced-custom-fields": "^6.4",
+    "twig/twig": "^3.21",
+    "fakerphp/faker": "^1.24"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "composer-plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}
