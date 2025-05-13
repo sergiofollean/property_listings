@@ -6,7 +6,6 @@
                     {% if listing.image_html %}
                         {{ listing.image_html|raw }}
                     {% else %}
-                        {# free placeholder img src #}
                         <img src="{{ placeholder_image }}" alt="Placeholder Image"
                              class="w-full h-50 object-cover">
                     {% endif %}

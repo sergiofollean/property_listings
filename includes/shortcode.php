@@ -4,9 +4,12 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-use Twig\Environment;
-
-// Add [property_listings] shortcode to display property listings
+/*
+ * [property_listings] shortcode
+ *
+ * Usage:
+ * [property_listings city="new-york" status="for-sale" type="apartment"]
+ * */
 add_shortcode('property_listings', function ($atts) {
     $atts = shortcode_atts([
         'posts_per_page' => 9,
@@ -52,7 +55,7 @@ add_shortcode('property_listings', function ($atts) {
     $query = new WP_Query($args);
 
     if (! $query->have_posts()) {
-        return '<p>' . __('No listings found.', 'textdomain') . '</p>';
+        return '<p>' . __('No listings found.') . '</p>';
     }
 
     $query->posts = array_map(function ($post) {
