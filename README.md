@@ -17,3 +17,16 @@
 - Core functionality is split into includes/ to ensure maintainable, readable, and scalable code
 - All WP_Query instances use selective fields and batching (e.g., paginated deletes) to reduce memory usage and improve performance
 - The "View Listing" button uses the wp-element-button class for consistent styling with WordPress block themes, avoiding redundant custom styles
+
+## WP CLI Commands
+**wp generate_listings**\
+Creates 1000 random listings with fake data (title, price, city, status, etc.).
+
+**wp generate_listings --with-image**\
+Creates 1000 listings and attaches random featured images
+
+**wp delete_listings**\
+delete all listing posts
+
+**wp delete_listings --delete-cities**\
+delete all listing posts and citiy terms
